@@ -4,7 +4,7 @@ import ChirpInput from './components/ChirpInput';
 const App = () => {
     return(
         <div>
-            <h1>Chirper</h1>
+            <h1 className="text-center">Chirper</h1>
             <ChirpInput />
         </div>
     );
