@@ -4,7 +4,8 @@ const ChirpInput = () => {
 
     return(
         <form>
-            <p>This is a form</p>
+            <input type="text" placeholder="Say something"/>
+            <button type="submit">Chirp It!</button>
         </form>
     );
 }
