@@ -1,9 +1,10 @@
 import React from "react";
+import ChirpInput from './components/ChirpInput';
 
 const App = () => {
     return(
         <div>
-            <h1>This is App!</h1>
+            <ChirpInput />
         </div>
     );
 };
