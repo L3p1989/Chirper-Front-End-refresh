@@ -5,8 +5,12 @@ const ChirpInput = () => {
     return(
         <div className="container">
             <form>
-                <input type="text" placeholder="Say something"/>
-                <button type="submit" className="btn primary">Chirp It!</button>
+                <div className="form-group">
+                    <input type="text" className="form-control" placeholder="Say something"/>
+                </div>
+                <div className="form-group">
+                    <button type="submit" className="btn btn-primary">Chirp It!</button>
+                </div>
             </form>
         </div>
     );
