@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const ChirpInput = ({ setChirps }) => {
+const ChirpInput = ({ chirps, setChirps }) => {
 
     const [id, setId] = useState(3);
 
@@ -17,16 +17,18 @@ const ChirpInput = ({ setChirps }) => {
             text: text
         };
 
-        let array = chirpsArray;
+        let oldChirps = [...chirps];
 
-        array.unshift(newChirp);
+        let newChirps = [...oldChirps];
 
-        setChirpsArray(array);
+        newChirps.unshift(newChirp);
+
+        setChirpsArray([...newChirps]);
 
         setId(id + 1);
 
-        setChirps(chirpsArray);
-        
+        setChirps([...newChirps]);
+
         e.preventDefault()
     }
 
