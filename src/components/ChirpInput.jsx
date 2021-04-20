@@ -11,12 +11,20 @@ const ChirpInput = ({ chirps, setChirps }) => {
     const [chirpsArray, setChirpsArray] = useState([]);
 
     const handleClick = (e) => {
-        let newChirp = {
-            id: id,
-            name: name,
-            text: text
-        };
+        e.preventDefault();
 
+        let newChirp = {};
+
+        if(name === '' || text === '') {
+            return alert('one or more fields are missing content')
+        } else {
+            newChirp = {
+                id: id,
+                name: name,
+                text: text
+            };
+        }
+        
         let newChirps = [...chirps];
 
         newChirps.unshift(newChirp);
@@ -26,8 +34,6 @@ const ChirpInput = ({ chirps, setChirps }) => {
         setId(id + 1);
 
         setChirps([...newChirps]);
-
-        e.preventDefault()
     }
 
     return(
