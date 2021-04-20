@@ -17,9 +17,7 @@ const ChirpInput = ({ chirps, setChirps }) => {
             text: text
         };
 
-        let oldChirps = [...chirps];
-
-        let newChirps = [...oldChirps];
+        let newChirps = [...chirps];
 
         newChirps.unshift(newChirp);
 
