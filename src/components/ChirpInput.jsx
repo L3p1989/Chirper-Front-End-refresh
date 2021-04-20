@@ -8,8 +8,6 @@ const ChirpInput = ({ chirps, setChirps }) => {
 
     const [text, setText] = useState('');
 
-    const [chirpsArray, setChirpsArray] = useState([]);
-
     const handleClick = (e) => {
         e.preventDefault();
 
@@ -28,8 +26,6 @@ const ChirpInput = ({ chirps, setChirps }) => {
         let newChirps = [...chirps];
 
         newChirps.unshift(newChirp);
-
-        setChirpsArray([...newChirps]);
 
         setId(id + 1);
 
